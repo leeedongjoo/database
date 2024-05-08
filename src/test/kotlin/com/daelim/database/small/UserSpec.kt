@@ -12,6 +12,7 @@ import org.springframework.boot.test.mock.mockito.MockBean
 import net.datafaker.Faker
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
+import kotlin.random.Random
 
 @SpringBootTest
 class UserSpec {
@@ -39,6 +40,17 @@ class UserSpec {
 
         // Then
         assertTrue(password.length in 8..16)
+    }
+    @Test
+    @DisplayName("주소 확인")
+    fun `주소 확인`(){
+
+        //when
+        var wrongAdress = "1234"
+        var correctAdress = Faker().address()
+
+        //then
+        assertEquals(wrongAdress, correctAdress)
     }
 
 }
