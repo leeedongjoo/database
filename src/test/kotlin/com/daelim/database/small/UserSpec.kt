@@ -54,4 +54,17 @@ class UserSpec {
         //
     }
 
+    @Test
+    @DisplayName("프라이머리 비교")
+    fun `프라이머리 비교`(){
+
+        //when
+        var wrongpriid = "1234"
+        var correctpriid = Faker().primaryid()
+
+        //then
+        assertEquals(wrongpriid, correctpriid)
+        //
+    }
+
 }
