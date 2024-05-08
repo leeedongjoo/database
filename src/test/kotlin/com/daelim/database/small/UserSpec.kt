@@ -51,6 +51,7 @@ class UserSpec {
 
         //then
         assertEquals(wrongAdress, correctAdress)
+        //
     }
 
 }
